@@ -1,8 +1,9 @@
 #This program makes a simple calculator that can add, subtract, multiply and divide
 
 import sys
+import math
 
-class Calculator(object):
+class Calculator:
 	
 	def __init__(self):
 		pass
@@ -22,13 +23,23 @@ class Calculator(object):
 	#Divide two integers
 	def divide(self,x, y):
 		return x / y;
+	
+	#squareroot of two integers
+	def sqrt(x,y):
+		pass
+		
+	def 	
+	
+	
+	
 
 class Engine(object):
 	
 	def start(self):
 		print"\n\n\n"
 		print '-'*30
-		menu = int(raw_input("Welcome to Calculator.py! Select your operation. \n 1. Add \n 2. Subtract \n 3. Multiply \n 4. Divide \n 5. End \n \t \t "))
+		print("Welcome to Calculator.py! Select your operation. \n 1. Add \n 2. Subtract \n 3. Multiply \n 4. Divide \n 5. End \n  ")
+		menu = int(raw_input(">>>"))
 		print '-'*30
 		print"\n\n\n"
 		if menu == 5:
