@@ -1,4 +1,6 @@
 #This program makes a simple calculator that can add, subtract, multiply and divide
+#adding gui using tkinter
+
 
 import math
 import Tkinter
