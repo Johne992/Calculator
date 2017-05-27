@@ -23,32 +23,60 @@ class Calculator:
 	#Divide two integers
 	def divide(self,x, y):
 		return x / y;
-	
-	#squareroot of two integers
-	def sqrt(x,y):
-		pass
-		
-	def 	
+	#Square one integer	
+	def square(x):
+		return x * x;
+	#Multiplicative Inverse of one integer
+	def multinv(x):
+		return 1 / x;
+
 	
 	
 	
 
-class Engine(object):
+class Engine:
+	
+	c = Calculator()
 	
 	def start(self):
-		print"\n\n\n"
-		print '-'*30
-		print("Welcome to Calculator.py! Select your operation. \n 1. Add \n 2. Subtract \n 3. Multiply \n 4. Divide \n 5. End \n  ")
-		menu = int(raw_input(">>>"))
-		print '-'*30
-		print"\n\n\n"
-		if menu == 5:
-			sys.exit()
-	
-		else:
-			a = int(raw_input("Enter your first number: \t"))
-			b = int(raw_input("Enter  your second number: \t"))
-			c = Calculator()
+		While True:
+			print"\n\n\n"
+			print '-'*30
+			print"Welcome to Calculator.py! Select your operation. \n 1. Add \n 2. Subtract \n 3. Multiply \n 4. Divide \n"
+			print" 5. Square \n 6. Squareroot \n 7. Reciprocal \n 8. End \n"
+			
+			try:
+				menu = int(raw_input(">>>"))
+			except ValueError:
+				print '*'*30
+				print "\n\nInvalid input please enter a number between 1 & 8.\n\n"
+				print '*'*30
+				continue
+				
+			print '-'*30
+			print"\n\n\n"
+			
+			if not menu in range(1,8)
+				print '*'*30
+				print "\n\nInvalid input please enter a number between 1 & 8.\n\n"
+				print '*'*30
+				continue
+			
+			elif menu == 8:
+				print "\n\n Good Bye! \n\n"
+				sys.exit()
+			
+			elif menu in range(1,4):
+				a = int(raw_input("Enter your first number: \t"))
+				b = int(raw_input("Enter  your second number: \t"))
+				twoint(a,b)
+		
+			elif:
+				a = int(raw_input("Enter your first number: \t"))
+				b = int(raw_input("Enter  your second number: \t"))
+				oneint(a)
+				
+			#resume here
 			
 			if menu == 1:
 				print "%d + %d = %d" %(a,b,c.add(a,b))
@@ -61,12 +89,13 @@ class Engine(object):
 		
 			elif menu == 4:
 				print "%d / %d = %d" %(a,b,c.divide(a,b))
-			
-			else:
-				print '-'*10
-				print "\n\nInvalid operator\n\n"
-				print "-"*10
-				start()
+				
+			elif menu == 5:
+				print
+				
+			elif menu == 6: 
+				print
+
 			
 	
 begin = Engine()
