@@ -28,6 +28,14 @@ class Calculator:
 		return x * x;
 	#Multiplicative Inverse of one integer
 	def multinv(x):
+		try:
+			a = 1 /x
+		except ZeroDivisionError:
+			print '*'*30
+			print "\n\nInvalid input cannot divide by 0.\n\n"
+			print '*'*30
+			continue
+		
 		return 1 / x;
 
 	
@@ -67,34 +75,41 @@ class Engine:
 				sys.exit()
 			
 			elif menu in range(1,4):
-				a = int(raw_input("Enter your first number: \t"))
-				b = int(raw_input("Enter  your second number: \t"))
-				twoint(a,b)
+				twoint(menu)
 		
-			elif:
-				a = int(raw_input("Enter your first number: \t"))
-				b = int(raw_input("Enter  your second number: \t"))
-				oneint(a)
+			elif menu in range(5,7):
+				oneint(menu,a)
 				
-			#resume here
-			
-			if menu == 1:
-				print "%d + %d = %d" %(a,b,c.add(a,b))
-		
-			elif menu == 2:
-				print "%d - %d = %d" %(a,b,c.subtract(a,b))
-		
-			elif menu == 3:
-				print "%d * %d = %d" %(a,b,c.multiply(a,b))
-		
-			elif menu == 4:
-				print "%d / %d = %d" %(a,b,c.divide(a,b))
+			else:
+				pass
 				
-			elif menu == 5:
-				print
+	def twoint(m)
+		a = int(raw_input("Enter your first number: \t"))
+		b = int(raw_input("Enter  your second number: \t"))
+		
+		if m == 1:
+			print "%d + %d = %d" %(a,b,c.add(a,b))
+		
+		elif m == 2:
+			print "%d - %d = %d" %(a,b,c.subtract(a,b))
+		
+		elif m == 3:
+			print "%d * %d = %d" %(a,b,c.multiply(a,b))
+		
+		elif m == 4:
+			print "%d / %d = %d" %(a,b,c.divide(a,b))
+		
+	def oneint(m)
+		a = int(raw_input("Enter your number: \t"))
+		
+		if m == 5:
+			print "%d ^ 2 = %d" %(a,c.square(a)) 
 				
-			elif menu == 6: 
-				print
+		elif m == 6:		
+			print "%Square root of %d = %d" %(a,sqrt(a))
+		
+		else:
+			print "Reciprocal of %d = %d" %(a,c.multinv(a))
 
 			
 	
