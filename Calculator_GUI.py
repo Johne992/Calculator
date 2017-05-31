@@ -3,7 +3,7 @@
 
 
 import math
-import Tkinter
+from Tkinter import *
 
 class Calculator(object):
 	
