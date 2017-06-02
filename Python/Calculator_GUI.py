@@ -1,13 +1,21 @@
 #This program makes a simple calculator that can add, subtract, multiply and divide
-#adding gui using tkinter
-
 
 import math
-from Tkinter import *
+from tkinter import *
 
 class Calculator(object):
 	
-	def __init__(self):
+	def __init__(self,master):
+		master.title('Calculator')
+		master.geometry()
+		self.e = Entry(master)
+		self.e.grid(row=0,column=0,columnspan=6,pady=3)
+		self.e.focus_set()
+		
+		self.div='÷'
+		self.newdiv = self.div.decode('utf-8')
+		
+		Button(master,text="=",width=10,command=lambda:self.equals()).grid(row=4, column=4,columnspan=2)
 		pass
 	
 	#Adds two numbers
@@ -26,17 +34,8 @@ class Calculator(object):
 	def divide(self,x, y):
 		return x / y;
 
-class Engine(object):
-	
-	def start(self):
-		print"\n\n\n"
-		print '-'*30
-		menu = int(raw_input("\n\nWelcome to Calculator.py!\n\n"))
-		print '-'*30
-		print"\n\n\n"
-		c = Calculator()	
-		start()
+
 			
-	
-begin = Engine()
-begin.start()
+start = Tk()
+obj=calc(start) #object instantiated
+start.mainloop()
