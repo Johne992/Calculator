@@ -1,10 +1,8 @@
 #This program makes a simple calculator that can add, subtract, multiply and divide
-
 import math
-from tkinter import *
+from Tkinter import * 
 
-class Calculator:
-
-start = Tk()
-obj =Calculator(start) 
-start.mainloop()
+calculator = Tk()
+calculator.wm_title("Calculator")
+# Code to add widgets will go here...
+calculator.mainloop()
