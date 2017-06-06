@@ -1,7 +1,6 @@
-#This program makes a calculator w/ a gui
-import math
 from Tkinter import * 
 
-calculator = Tk()
-calculator.wm_title("Calculator")
-calculator.mainloop()
+top = Tk()
+top.wm_title("Calculator")
+top.geometry("400x450")
+top.mainloop()
